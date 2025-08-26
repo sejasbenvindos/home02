@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Bol 20 - Provedor de Internet de Alta Velocidade</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #198754;
+            --dark-color: #212529;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .navbar {
+            background-color: var(--primary-color) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3') no-repeat center center/cover;
+            padding: 150px 0;
+            color: white;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .bg-light-custom {
+            background-color: #f8f9fa;
+        }
+        
+        .icon-box {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .service-card {
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            padding: 10px 25px;
+            font-weight: 600;
+        }
+        
+        .btn-primary:hover {
+            background-color: #0b5ed7;
+            border-color: #0a58ca;
+        }
+        
+        .contact-info {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .contact-info li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .pricing-card {
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card:hover {
+            transform: scale(1.03);
+        }
+        
+        .pricing-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 20px;
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .stats-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .testimonial-card {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            height: 100%;
+        }
+        
+        .client-image {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .cnpj-badge {
+            background-color: #6c757d;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">
+                <i class="bi bi-wifi"></i> Cyber Bol 20
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#inicio">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicos">Serviços</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#planos">Planos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">Contato</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Internet Rápida e Estável para Você</h1>
+            <p class="lead mb-4">Conectando o Rio de Janeiro com a melhor tecnologia em internet banda larga</p>
+            <a href="#planos" class="btn btn-primary btn-lg mt-3">Conheça Nossos Planos</a>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">Nossos Serviços</h2>
+                <p class="lead text-muted">Oferecemos as melhores soluções em conectividade para residências e empresas</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="icon-box">
+                            <i class="bi bi-house-door-fill"></i>
+                        </div>
+                        <h3>Internet Residencial</h3>
+                        <p>Planos de internet de alta velocidade para sua casa com suporte técnico especializado 24/7.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="icon-box">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <h3>Internet Empresarial</h3>
+                        <p>Conectividade robusta e segura para empresas com garantia de uptime e suporte prioritário.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card h-100 text-center p-4">
+                        <div class="icon-box">
+                            <i class="bi bi-wifi"></i>
+                        </div>
+                        <h3>Link Dedicado</h3>
+                        <p>Conexões dedicadas para empresas que exigem máxima estabilidade e performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos -->
+    <section id="planos" class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">Nossos Planos</h2>
+                <p class="lead text-muted">Escolha o plano ideal para suas necessidades</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header text-center">
+                            <h3>Básico</h3>
+                            <div class="price"><span class="fs-1 fw-bold">R$ 79,90</span>/mês</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> 100 Mbps de velocidade</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Download ilimitado</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Wi-Fi incluso</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Instalação gratuita</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Suporte 24/7</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="#contato" class="btn btn-outline-primary">Contratar Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header text-center bg-warning">
+                            <h3>Premium</h3>
+                            <div class="price"><span class="fs-1 fw-bold">R$ 119,90</span>/mês</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> 300 Mbps de velocidade</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Download ilimitado</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Wi-Fi avançado</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Instalação gratuita</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Suporte prioritário 24/7</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="#contato" class="btn btn-primary">Contratar Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="pricing-card">
+                        <div class="pricing-header text-center">
+                            <h3>Ultra</h3>
+                            <div class="price"><span class="fs-1 fw-bold">R$ 159,90</span>/mês</div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="feature-list">
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> 500 Mbps de velocidade</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Download ilimitado</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Wi-Fi mesh incluído</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Instalação gratuita</li>
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Suporte VIP 24/7</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="#contato" class="btn btn-outline-primary">Contratar Agora</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="section-padding">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Sobre a Cyber Bol 20</h2>
+                    <p class="lead">Há mais de 10 anos fornecendo internet de qualidade para o Rio de Janeiro.</p>
+                    <p>A Cyber Bol 20 nasceu com o objetivo de oferecer conexão de alta velocidade e estabilidade para residências e empresas. Nossa missão é conectar pessoas e negócios com tecnologia de ponta e atendimento personalizado.</p>
+                    <p>Contamos com uma infraestrutura robusta e uma equipe técnica especializada para garantir a melhor experiência de navegação para nossos clientes.</p>
+                    <div class="mt-4">
+                        <span class="cnpj-badge">CNPJ: 07.875.278/0001-51</span>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row text-center mt-5 mt-lg-0">
+                        <div class="col-6 mb-4">
+                            <div class="stats-number">10+</div>
+                            <p>Anos no mercado</p>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div class="stats-number">5000+</div>
+                            <p>Clientes satisfeitos</p>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div class="stats-number">99.7%</div>
+                            <p>Uptime garantido</p>
+                        </div>
+                        <div class="col-6 mb-4">
+                            <div class="stats-number">24/7</div>
+                            <p>Suporte técnico</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="section-padding bg-light-custom">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">O que nossos clientes dizem</h2>
+                <p class="lead text-muted">A satisfação dos nossos clientes é nossa maior recompensa</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente" class="client-image">
+                            <div>
+                                <h5 class="mb-0">Carlos Silva</h5>
+                                <p class="text-muted mb-0">Centro, RJ</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Estou há 3 anos com a Cyber Bol 20 e nunca tive problemas. A internet é estável e rápida, perfeita para trabalhar em casa e streaming."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente" class="client-image">
+                            <div>
+                                <h5 class="mb-0">Mariana Oliveira</h5>
+                                <p class="text-muted mb-0">Centro, RJ</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Atendimento excelente e internet de qualidade. Sempre que precisei do suporte técnico, foram muito ágeis e resolveram rapidamente."</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="d-flex align-items-center mb-4">
+                            <img src="https://randomuser.me/api/portraits/men/76.jpg" alt="Cliente" class="client-image">
+                            <div>
+                                <h5 class="mb-0">Ricardo Santos</h5>
+                                <p class="text-muted mb-0">Centro, RJ</p>
+                            </div>
+                        </div>
+                        <p class="mb-0">"Migrei para a Cyber Bol 20 há 6 meses e foi a melhor decisão. Internet rápida, estável e um custo-benefício imbatível."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="section-padding">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold mb-3">Entre em Contato</h2>
+                <p class="lead text-muted">Estamos à disposição para tirar suas dúvidas</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="nome" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="nome" required>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="telefone" class="form-label">Telefone</label>
+                                <input type="tel" class="form-control" id="telefone">
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="mensagem" class="form-label">Mensagem</label>
+                                <textarea class="form-control" id="mensagem" rows="5" required></textarea>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-6">
+                    <div class="ps-lg-5">
+                        <h4 class="mb-4">Informações de Contato</h4>
+                        <ul class="contact-info">
+                            <li>
+                                <i class="bi bi-geo-alt-fill"></i>
+                                <div>
+                                    <strong>Endereço:</strong><br>
+                                    Rua Do Riachuelo 241 Box 32, Centro<br>
+                                    Rio de Janeiro RJ, 20230-014
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-telephone-fill"></i>
+                                <div>
+                                    <strong>Telefone:</strong><br>
+                                    (21) 1234-5678
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-envelope-fill"></i>
+                                <div>
+                                    <strong>E-mail:</strong><br>
+                                    contato@cyberbol20.com.br
+                                </div>
+                            </li>
+                            <li>
+                                <i class="bi bi-clock-fill"></i>
+                                <div>
+                                    <strong>Horário de Atendimento:</strong><br>
+                                    Segunda a Sexta: 8h às 18h<br>
+                                    Sábado: 9h às 13h
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mt-4">
+                            <h5>Nossas Redes Sociais</h5>
+                            <div class="d-flex mt-3">
+                                <a href="#" class="text-primary me-3 fs-4"><i class="bi bi-facebook"></i></a>
+                                <a href="#" class="text-primary me-3 fs-4"><i class="bi bi-instagram"></i></a>
+                                <a href="#" class="text-primary me-3 fs-4"><i class="bi bi-whatsapp"></i></a>
+                                <a href="#" class="text-primary me-3 fs-4"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4"><i class="bi bi-wifi"></i> Cyber Bol 20</h5>
+                    <p>Provedor de internet de alta velocidade com mais de 10 anos de experiência no mercado carioca.</p>
+                    <p>CNPJ: 07.875.278/0001-51</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-4">Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#inicio" class="text-white text-decoration-none">Início</a></li>
+                        <li class="mb-2"><a href="#servicos" class="text-white text-decoration-none">Serviços</a></li>
+                        <li class="mb-2"><a href="#planos" class="text-white text-decoration-none">Planos</a></li>
+                        <li class="mb-2"><a href="#sobre" class="text-white text-decoration-none">Sobre</a></li>
+                        <li class="mb-2"><a href="#contato" class="text-white text-decoration-none">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-4">Redes Sociais</h5>
+                    <div class="d-flex">
+                        <a href="#" class="text-white me-3 fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3 fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white me-3 fs-5"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-3 fs-5"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                    <div class="mt-4">
+                        <h5>Formas de Pagamento</h5>
+                        <div class="d-flex flex-wrap mt-2">
+                            <i class="bi bi-credit-card me-2 fs-5"></i>
+                            <i class="bi bi-paypal me-2 fs-5"></i>
+                            <i class="bi bi-currency-dollar me-2 fs-5"></i>
+                            <i class="bi bi-bank me-2 fs-5"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-4 mb-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Cyber Bol 20 Servicos de Acesso A Internet LTDA. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
